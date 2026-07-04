@@ -18,12 +18,12 @@ function App(){
   const addApplication = async (newApplication) => {
   try {
     await axios.post(
-      "http://127.0.0.1:5000/applications",
+      "https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications",
       newApplication
     );
 
     const response = await axios.get(
-      "http://127.0.0.1:5000/applications"
+      "https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications"
     );
 
     setApplications(response.data);
@@ -38,10 +38,10 @@ function App(){
 };
 const deleteApplication = async (id) => {
   try {
-    await axios.delete(`http://127.0.0.1:5000/applications/${id}`);
+    await axios.delete(`https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications/${id}`);
 
     const response = await axios.get(
-      "http://127.0.0.1:5000/applications"
+      "https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications"
     );
 
     setApplications(response.data);
@@ -54,7 +54,7 @@ const editApplication = (application) => {
 };
 useEffect(() => {
   axios
-    .get("http://127.0.0.1:5000/applications")
+    .get("https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications")
     .then((response) => {
       setApplications(response.data);
     })
