@@ -35,7 +35,7 @@ function AddApplication({
   };
 
   if (editingApplication) {
-   fetch(`https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications/${editingApplication._id}`, {
+   fetch(`https://placement-pro-backend-e8vkun7jo-nishitha-rai.vercel.app/applications/${editingApplication._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ function AddApplication({
       body: JSON.stringify(newApplication),
     })
       .then(async () => {
-  const response = await fetch("https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications");
+  const response = await fetch("https://placement-pro-backend-e8vkun7jo-nishitha-rai.vercel.app/applications");
   const data = await response.json();
   setApplications(data);
 })
