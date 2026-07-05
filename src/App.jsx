@@ -18,12 +18,12 @@ function App(){
   const addApplication = async (newApplication) => {
   try {
     await axios.post(
-      "https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications",
+      "https://placement-pro-backend-mujizy34a-nishitha-rai.vercel.app/applications",
       newApplication
     );
 
     const response = await axios.get(
-      "https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications"
+      "https://placement-pro-backend-mujizy34a-nishitha-rai.vercel.app/applications"
     );
 
     setApplications(response.data);
@@ -38,10 +38,10 @@ function App(){
 };
 const deleteApplication = async (id) => {
   try {
-    await axios.delete(`https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications/${id}`);
+    await axios.delete(`https://placement-pro-backend-mujizy34a-nishitha-rai.vercel.app/applications/${id}`);
 
     const response = await axios.get(
-      "https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications"
+      "https://placement-pro-backend-mujizy34a-nishitha-rai.vercel.app/applications"
     );
 
     setApplications(response.data);
@@ -54,7 +54,7 @@ const editApplication = (application) => {
 };
 useEffect(() => {
   axios
-    .get("https://placement-pro-backend-fiyc2i9c7-nishitha-rai.vercel.app/applications")
+    .get("https://placement-pro-backend-mujizy34a-nishitha-rai.vercel.app/applications")
     .then((response) => {
       setApplications(response.data);
     })
